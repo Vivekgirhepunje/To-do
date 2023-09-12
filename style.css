@@ -1,0 +1,217 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Indie Flower";
+ }
+ body::-webkit-scrollbar{
+   display: hidden;
+ }
+ html{
+   font-size: 62.5%;
+ }
+ body,
+ html {
+     width: 100%;
+     height: 100%
+ }
+ body{
+    position: relative;
+    overflow-x: hidden;
+ }
+
+ #crsr{
+   /* background-image: url("https://png.pngtree.com/png-clipart/20201226/ourmid/pngtree-slender-black-cat-paw-png-image_2633276.jpg"); */
+   z-index: 99;
+    position: absolute;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #b89874;  
+    border:1px solid #cc8637;
+    width: 20px;
+    transition: all linear 0.1s;
+    mix-blend-mode: darken;
+ }
+
+
+ #main {
+      position: relative;
+      width: 100%;
+     /* background-color: white; */
+     /* EADBC8 */
+     /* 102C57 */
+ }
+ #loader{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position:absolute;
+   height: 100vh;
+   width: 100%;
+   background-color: #EADBC8;
+   z-index: 10;
+ }
+ #loader img{
+    height: 100px;
+    width: 100px;
+ }
+ #main #container {
+     width: 100%;
+     min-height: 100vh;
+     background-color: #F8F0E5;
+     padding: 2vw 5vw;
+ }
+
+ #container #bar {
+     height: 80px;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     /* border: 2px solid blueviolet; */
+     /* border-bottom: 2px solid black; */
+ }
+
+ #bar img {
+     height: 9rem;
+ }
+
+ #bar img:nth-child(1) {
+     justify-self: self-start;
+     /* border: 2px solid blue */
+ }
+
+ #bar img:nth-child(3) {
+     align-self: flex-end;
+ }
+
+ #container #bar h1 {
+     text-align: center;
+     font-size: 7rem;
+     white-space: nowrap;
+     font-weight: 1000;
+     color:rgba(0, 0, 0, 0.852);
+     text-shadow: 3px 5px 5px #b89874;
+     /* text-underline-position: 210px; */
+ }
+
+ form{
+    width: 100%;
+    padding: 3vw 0;
+ }
+ form .addto-do{
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DAC0A3;
+    padding: 1.5vw 2vw;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px #dbc7ad;
+
+ }
+ input{
+    background-color: #F8F0E5;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 1px 1px 5px #b89874;
+    font-size: 2.5rem;
+
+ }
+ .addto-do input[type="text"]{
+    width:30%;
+    padding: 3px 5px;
+    transition: all ease-in-out 0.5s;
+ }
+ .addto-do input[type="submit"]{
+    width:10%;
+    padding: 3px 5px;
+    transition: all ease-in-out 0.5s;
+ }
+ .addto-do input[type="submit"]:hover,.addto-do input[type="text"]:hover{
+   box-shadow: 0 10px 10px #b89874;
+   transition: all ease-in-out 0.5s;
+ }
+ .todolist{
+    margin-top: 15px;
+    width: 100%;
+ }
+ .todolist .todo{
+    /* border: 2px solid red;   */
+    font-size: 3rem;
+    background-color: #EADBC8;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5vw 2vw;
+    box-shadow: 2px 2px 1px #dbc7ad;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: all ease-in-out 0.5s;
+ }
+ .todo .todotext{
+   height: auto;
+ }
+ 
+ .todo .todobtn button{
+   font-size: 2.5rem;
+    background-color: #F8F0E5;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 1px 1px 5px #b89874;
+    padding: 3px 10px;
+    margin-left: 8px;
+    transition: all ease-in-out 0.2s;
+ }
+ .todo .todobtn button:hover{
+   background-color: #dbc7ad;
+   box-shadow: 0px 3px 5px #b89874;
+   transition: all ease-in-out 0.2s;
+ }
+
+
+ 
+ 
+ @media(max-width:480px){
+   html{
+      font-size: 50%;
+   }
+   #container #bar h1{
+      font-size: 6-rem;
+   }
+   #bar img {
+      height: 7rem;
+  }
+  #crsr{
+   display: none;
+  }
+   .addto-do input[type="text"]{
+      width:50%;
+      padding: 0.5 ;
+      transition: all ease-in-out 0.5s;
+   }
+   .addto-do input[type="submit"]{
+      width:20%;
+      padding: 3px 5px;
+      transition: all ease-in-out 0.5s;
+   }
+   .addto-do input[type="submit"]:hover,.addto-do input[type="text"]:hover{
+     box-shadow: 0 10px 10px #b89874;
+     transition: all ease-in-out 0.5s;
+   }
+   .todo .todotext{
+      max-width: fit-content;
+      height: auto;
+   }
+   .todo .todobtn{
+      max-width: fit-content;
+      white-space: nowrap;
+    }
+   
+ }
+
+ 
